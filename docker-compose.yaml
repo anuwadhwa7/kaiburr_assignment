@@ -1,0 +1,28 @@
+version: '3'
+services:
+  kaiburr-nginx:
+    container_name: kaiburr-nginx
+    image: nginx:1.13
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d
+    depends_on:
+      - app
+
+  kaiburr-mongodb:
+    container_name: kaiburr-mongodb
+    image: mongo:3.6
+    restart: always
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
+
+  app:
+    container_name: kaiburr-server-by-anurag
+    image: kaiburr-server:latest
+    expose:
+      - 8080
+    depends_on:
+      - kaiburr-mongodb
