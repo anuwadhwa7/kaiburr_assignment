@@ -9,7 +9,7 @@ services:
     volumes:
       - ./nginx/:/etc/nginx/conf.d
     depends_on:
-      - app
+      - kaiburr-ui
 
   kaiburr-mongodb:
     container_name: kaiburr-mongodb
@@ -19,10 +19,18 @@ services:
       - 27017:27017
     command: mongod --smallfiles --logpath=/dev/null # --quiet
 
-  app:
-    container_name: kaiburr-server-by-anurag
+  kaiburr-backend:
+    container_name: kaiburr-backend-by-anurag
     image: kaiburr-server:latest
     expose:
       - 8080
     depends_on:
       - kaiburr-mongodb
+
+  kaiburr-ui:
+    container_name: kaiburr-ui-by-anurag
+    image: kaiburr-ui:latest
+    expose:
+      - 4200
+    depends_on:
+      - kaiburr-backend

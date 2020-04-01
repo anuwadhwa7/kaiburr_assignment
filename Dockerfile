@@ -3,5 +3,9 @@ MAINTAINER anurag.wadhwa7@gmail.com
 
 WORKDIR /code
 COPY . /code/
+RUN mkdir /app
 RUN mvn clean compile package
-CMD java -jar /code/target/servers-1.0-SNAPSHOT.jar
+RUN mv /code/target/servers-1.0-SNAPSHOT.jar /app/kaiburr-app-server.jar
+WORKDIR /app
+RUN rm -rf /code
+CMD java -jar kaiburr-app-server.jar

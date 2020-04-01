@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ServerController {
 
     private static final String template = "Hello, %s!";
@@ -20,6 +21,7 @@ public class ServerController {
     @Autowired
     private ServerRepository database;
 
+    @CrossOrigin
     @GetMapping("/server/{id}")
     public Server getServerDetails(@PathVariable("id") String id){
         Optional<ServerEntity> serverEntityOptional = database.findById(id);
@@ -31,6 +33,7 @@ public class ServerController {
         }
     }
 
+    @CrossOrigin
     @GetMapping("/server/")
     public List<Server> getAllServer() {
         List<Server> serverList = new ArrayList<>();
@@ -43,6 +46,7 @@ public class ServerController {
         return serverList;
     }
 
+    @CrossOrigin
     @PutMapping("/server")
     public Server createServer(@NotNull @RequestBody Server server){
         ServerEntity serverEntity = new ServerEntity(server);
@@ -50,6 +54,7 @@ public class ServerController {
         return new Server(savedServerEntity);
     }
 
+    @CrossOrigin
     @DeleteMapping("/server/{id}")
     public void delete(@PathVariable("id") String id){
         Optional<ServerEntity> serverEntityOptional = database.findById(id);
@@ -61,6 +66,7 @@ public class ServerController {
         }
     }
 
+    @CrossOrigin
     @GetMapping("/server/search/{name}")
     public List<Server> findServerByName(@PathVariable(value = "name")String name){
         List<ServerEntity> serverEntityList = database.findByNameLike(name);
