@@ -45,10 +45,11 @@ In this task I have integrated my Kaiburr Server REST API with swagger because I
 
 Task 2 Screenshots :
 
-	<img src = "src/main/resources/screenshots/swagger_implementation.png">
+
+<img src = "src/main/resources/screenshots/swagger_implementation.png">
 	
-	
-	<img src = "src/main/resources/screenshots/swagger_put_example.png">
+        
+<img src = "src/main/resources/screenshots/swagger_put_example.png">
 	
 
 
