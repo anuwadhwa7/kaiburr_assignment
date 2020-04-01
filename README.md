@@ -2,7 +2,7 @@ Task 1. Java REST API example.
 
 # Kaiburr Server REST API
 
-Implement an application in java which provides a REST API with endpoints for searching, creating and deleting “server” objects
+Implement an application in java which provides a REST API with endpoints for searching, creating and deleting “server” objects.
 
 Created the REST API application using Spring Boot - Maven while at the same time mantaining code modularization and testing exposed endpoints using Postman .
 
@@ -30,3 +30,31 @@ Task 1 Sceenshots :
 	
 	Return 404 if nothing is found.
 	<img src = "src/main/resources/screenshots/find_by_name_not_found_404.png">
+	
+6. Data in MongoDB database.
+	<img src = "src/main/resources/screenshots/docker_mongo_db_server.png">
+	
+
+	
+
+Task 2. Swagger codegen.
+
+# Kaiburr Swagger Integration
+
+In this task I have integrated my Kaiburr Server REST API with swagger because I didn't require Codegen Stub for the REST APIs.
+
+Task 2 Screenshots :
+
+	<img src = "src/main/resources/screenshots/swagger_implementation.png">
+	
+	
+	<img src = "src/main/resources/screenshots/swagger_put_example.png">
+	
+
+
+
+Task 3. Docker compose.
+
+# Kaiburr Docker Compose
+
+
