@@ -110,6 +110,4 @@ Task 3 Screenshots :
 
 2. For Docker Compose :
 
-
 `spring.data.mongodb.host=kaiburr-mongodb` in `src -> main -> resources -> application.properties` file.
-
