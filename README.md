@@ -104,4 +104,12 @@ Task 3 Screenshots :
 
 ## Deployment of Web Application
 
-Change `spring.data.mongodb.host=localhost` to any deployment server name from `src -> main -> resources -> application.properties` file.
+1. To run on localhost :
+
+`spring.data.mongodb.host=localhost` in `src -> main -> resources -> application.properties` file.
+
+2. For Docker Compose :
+
+
+`spring.data.mongodb.host=kaiburr-mongodb` in `src -> main -> resources -> application.properties` file.
+
