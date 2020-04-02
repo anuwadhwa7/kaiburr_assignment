@@ -43,6 +43,8 @@ Task 2. Swagger codegen.
 
 In this task I have integrated my Kaiburr Server REST API with swagger because I didn't require Codegen Stub for the REST APIs.
 
+Swagger is an open-source software framework backed by a large ecosystem of tools that helps developers design, build, document, and consume RESTful web services.
+
 Task 2 Screenshots :
 
 
